@@ -26,4 +26,7 @@ createUser = async () => {
     }
 };
 
-module.exports = { createUser};
+module.exports = { 
+    createUser,
+    baseURL
+};
