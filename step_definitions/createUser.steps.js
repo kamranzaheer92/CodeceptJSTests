@@ -1,7 +1,7 @@
 const { I } = inject();
 const {expect} = require('chai')
 const {createUser} = require('../tests/createUser')
-let Id
+const {globalVariables} = require('../EnvironmentVariables/globalVariables')
 
 Given('I hit the url via create user API', async() => {
     this.response =await createUser()
@@ -12,9 +12,6 @@ Then ('I verify the response of the create user API', async()=> {
     expect(this.response).to.have.property('name')
 }) 
 Then ('I get the id of the user created', ()=> {
-    Id= this.response.id
-    console.log(Id)
+    globalVariables.id= this.response.id
+    console.log(globalVariables.id)
 }) 
-module.exports = {
-    Id
-}

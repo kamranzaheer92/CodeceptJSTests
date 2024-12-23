@@ -3,7 +3,7 @@ const { I } = inject();
 const {getListOfUsers} = require('../tests/getUsers')
 let response;
 
-Given('I hit the url', async() => {
+Given ('I hit the url', async() => {
   response = await getListOfUsers()
 });
 Then ('List of users returned', ()=> {

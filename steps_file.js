@@ -1,3 +1,12 @@
+const {globalVariables,resetGlobalVariables} = require('./EnvironmentVariables/globalVariables')
+
+After(() => {
+  console.log("Global variales before reset :",globalVariables)
+  // resetGlobalVariables()
+  // console.log("Global variables after reset : ",globalVariables)
+
+})
+
 // in this file you can append custom step methods to 'I' object
 
 module.exports = function() {
